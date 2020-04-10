@@ -1,0 +1,15 @@
+<header class="header flex flex_wrap limiter">
+  <a routerLink="/" class="logo ui-link flex flex_center">
+    <img src="assets/logo.png" alt="Логотип KBTU Tutors"
+      width="32" class="push_right_small">
+    KBTU Tutors
+  </a>
+
+  <div *ngIf="showActions">
+    <a routerLink="sign-up" class="button">Регистрация</a>
+    <a routerLink="login"
+      class="button ui-link button_accent">
+      Войти
+    </a>
+  </div>
+</header>

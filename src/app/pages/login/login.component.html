@@ -1,0 +1,30 @@
+<div class="login">
+  <app-header></app-header>
+  <section
+    class="limiter pad_top_large pad_bottom_large flex flex_center fullscreen">
+    <form
+      class="column pad_medium pad_top_large pad_bottom_large push_both">
+      <h1>С возвращением 💝</h1>
+      <div class="flex flex_wrap">
+        <div class="push_right_small">
+          <h4>Почта</h4>
+          <input type="email" class="input"
+            placeholder="some@mail.com" name="email" [(ngModel)]="email">
+        </div>
+        <div>
+          <h4>Пароль</h4>
+          <input type="password" class="input"
+            placeholder="********" name="password" [(ngModel)]="password">
+        </div>
+      </div>
+      <button (click)="login()"
+        class="button button_accent push_top_medium">
+        Войти
+      </button>
+      <h5>Нет аккаунта? Создать можно <a
+          routerLink="/sign-up">тут</a></h5>
+    </form>
+  </section>
+
+  <app-footer></app-footer>
+</div>

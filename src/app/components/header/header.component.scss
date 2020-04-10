@@ -1,0 +1,27 @@
+@use '../../swatch.scss';
+@use '../../breakpoints.scss';
+
+.header {
+    min-height: 4rem;
+    line-height: 4rem;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px dashed swatch.$accent;
+}
+
+.logo {
+    width: 100%;
+    text-align: center;
+    font-size: 1.25rem;
+    font-family: 'Patrick Hand', cursive;
+}
+
+@media screen and (min-width: breakpoints.$tablet) {
+    .header {
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: auto;
+    }
+}

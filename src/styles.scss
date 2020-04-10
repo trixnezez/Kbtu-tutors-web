@@ -1,1 +1,251 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'app/breakpoints.scss';
+@use 'app/swatch.scss';
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+}
+
+html {
+  // fluid typography
+  color: swatch.$text1;
+  font-family: Ubuntu, sans-serif;
+  font-size: calc(16px + 6 * ((100vw - 480px) / 1980));
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+blockquote::before,
+blockquote::after {
+  content: "\"";
+}
+
+a {
+  color: swatch.$accentDark;
+}
+
+hr {
+  width: 100%;
+  height: 0;
+  border: 1px solid swatch.$accentLight;
+  margin: 1rem auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+.title {
+  font-weight: 700;
+}
+
+.text_center {
+  text-align: center;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex_wrap {
+  flex-wrap: wrap;
+}
+
+.push {
+  &_all {
+    margin: auto;
+  }
+  
+  &_both {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  &_left {
+    margin-left: auto;
+  }
+  
+  &_right {
+    margin-right: auto;
+  }
+
+  &_left_small {
+    margin-left: 10px;
+  }
+  
+  &_right_small {
+    margin-right: 10px;
+  }
+
+  &_left_medium {
+    margin-left: 2rem;
+  }
+  
+  &_right_medium {
+    margin-right: 2rem;
+  }
+
+  &_top_small {
+    margin-top: 10px;
+  }
+  
+  &_bottom_small {
+    margin-bottom: 10px;
+  }
+
+  &_top_medium {
+    margin-top: 2rem;
+  }
+  
+  &_bottom_medium {
+    margin-bottom: 2rem;
+  }
+}
+
+.input {
+  border: 0;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  resize: vertical;
+  color: swatch.$text1;
+  background-color: swatch.$accentLight;
+}
+
+.flex_center {
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.expanded {
+  flex: 1;
+}
+
+.limiter {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 2400px;
+  margin: 0 auto;
+}
+
+.button {
+  border: 0;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  font-size: .8rem;
+  text-align: center;
+}
+
+.button_accent {
+  background-color: swatch.$accent;
+}
+
+.ui-link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.dark {
+  color: swatch.$accentLight;
+  background-color: swatch.$text1;
+}
+
+.pad {
+  &_small {
+    padding: .5rem;
+  }
+
+  &_medium {
+    padding: 2rem;
+  }
+  
+  &_large {
+    padding: 4rem;
+  }
+
+  &_top_small {
+    padding-top: 10px;
+  }
+  
+  &_top_medium {
+    padding-top: 2rem;
+  }
+  
+  &_top_large {
+    padding-top: 4rem;
+  }
+
+  &_bottom_small {
+    padding-bottom: 10px;
+  }
+  
+  &_bottom_medium {
+    padding-bottom: 2rem;
+  }
+  
+  &_bottom_large {
+    padding-bottom: 4rem;
+  }
+}
+
+@media screen and (min-width: breakpoints.$smartphone) {
+  .limiter {
+    max-width: breakpoints.$smartphone;
+  }
+}
+
+@media screen and (min-width: breakpoints.$tablet) {
+  .limiter {
+    max-width: breakpoints.$tablet;
+  }
+}
+
+@media screen and (min-width: breakpoints.$laptop) {
+  .limiter {
+    max-width: breakpoints.$laptop;
+  }
+}
+
+@media screen and (min-width: breakpoints.$pc) {
+  .limiter {
+    max-width: breakpoints.$pc;
+  }
+}
+
+@media screen and (min-width: breakpoints.$hd) {
+  .limiter {
+    max-width: breakpoints.$hd;
+  }
+}

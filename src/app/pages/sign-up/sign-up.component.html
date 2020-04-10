@@ -1,0 +1,25 @@
+<div class="sign-up">
+  <app-header></app-header>
+  <section
+    class="limiter pad_top_large pad_bottom_large flex flex_center" style="min-height: 100vh;">
+    <form
+      class="column pad_medium pad_top_large pad_bottom_large push_both">
+      <h1>Добро пожаловать 😍</h1>
+      <h4>Почта</h4>
+      <input type="email" class="input"
+        placeholder="some@mail.com" name="email" [(ngModel)]="email">
+      <h4>Пароль</h4>
+      <input type="password" name="password1" class="input"
+        placeholder="********" [(ngModel)]="password1">
+      <h4>Пароль еще раз</h4>
+      <input type="password" name="password2" class="input"
+        placeholder="********" [(ngModel)]="password2">
+      <button (click)="signUp()"
+        class="button button_accent push_top_medium">Зарегистрироваться</button>
+      <h5>Есть аккаунт? Войти можно <a
+          routerLink="/login">тут</a></h5>
+    </form>
+  </section>
+
+  <app-footer></app-footer>
+</div>

@@ -1,0 +1,10 @@
+<div>
+  <app-header></app-header>
+  <section class="limiter pad_top_medium pad_bottom_medium" style="min-height: 100vh;">
+    <div *ngFor="let reply of (replies | async)" >
+      <app-reply [message]="reply.message"
+        [author]="reply.author"></app-reply>
+    </div>
+  </section>
+  <app-footer></app-footer>
+</div>

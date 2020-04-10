@@ -1,0 +1,34 @@
+@use '../../breakpoints.scss';
+@use '../../swatch.scss';
+
+.hero {
+    justify-content: space-between;
+
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    background-color: #fff;
+}
+
+.title {
+    font-weight: 400;
+}
+
+.subtle {
+    color: swatch.$accentDark;
+}
+
+.content {
+    max-width: breakpoints.$smartphone;
+}
+
+.thumb {
+    display: none;
+    margin-left: 120px;
+}
+
+@media screen and (min-width: breakpoints.$laptop) {
+    .thumb {
+        display: initial;
+    }
+}

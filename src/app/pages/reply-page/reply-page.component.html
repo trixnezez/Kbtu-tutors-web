@@ -1,0 +1,15 @@
+<div>
+  <app-header></app-header>
+  <section class="limiter flex flex_center"
+    style="min-height: 100vh;">
+    <form class="column">
+      <h1>Ваш отзыв</h1>
+      <textarea name="message" cols="70" rows="20"
+        ([ngModel])="message"
+        placeholder="Ваш отзыв" class="input"></textarea>
+        <button (click)="reply()" class="button button_accent push_top_small">Отправить</button>
+        <h5 class="text_center">Отзывы проходят модерацию</h5>
+    </form>
+  </section>
+  <app-footer></app-footer>
+</div>

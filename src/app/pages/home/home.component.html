@@ -1,0 +1,76 @@
+<div class="home">
+  <app-header [showActions]="true"></app-header>
+  <app-hero></app-hero>
+  <section>
+    <h2 class="pad_bottom_medium text_center title">
+      С нами вы сможете освоить
+    </h2>
+
+    <div class="card-group push_both">
+      <div
+        class="pad_small card-group__card column flex_center expanded">
+        <h3>Французкий</h3>
+
+        <img src="assets/fr.png"
+          alt="Значок Эйфелевой башни" width="160">
+
+        <p>
+          <button class="button">Подробнее</button>
+        </p>
+      </div>
+
+      <div
+        class="pad_small card-group__card column flex_center expanded">
+        <h3>Английский</h3>
+
+        <img src="assets/en.png" width="160"
+          alt="Значок Статуи Свободы">
+
+        <p>
+          <button class="button">Подробнее</button>
+        </p>
+      </div>
+
+      <div
+        class="pad_small card-group__card column flex_center expanded">
+        <h3>Японский</h3>
+
+        <img src="assets/jp.png" width="160"
+          alt="Значок Японии">
+
+        <p>
+          <button class="button">Подробнее</button>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="limiter pad_top_large pad_bottom_large">
+    <h3 class="pad_bottom_medium title">Вот что о нас
+      говорят</h3>
+
+    <app-reply
+      [message]="'Здесь круто! Каждый раз рассматриваем вещи живо и с разных точек зрения. Это очень мотивирует учить язык.'"
+      [author]="'Адиль'"></app-reply>
+
+    <app-reply [message]="'Привет! Я мечтаю жить в Японии, мне нравится их
+    культура и произведения в жанре аниме. Я очень рада,
+    что нашла в KBTU Tutors друзей со схожими вкусами.'"
+      [author]="'Айдан'"></app-reply>
+
+    <app-reply [message]="'Отличные курсы. Уже на уровне C1, но хожу сюда ради
+    того чтобы хорошо провести время, хех)'"
+      [author]="'Темирлан'"></app-reply>
+
+    <div class="flex flex_center flex_wrap">
+      <a routerLink="/reply"
+        class="button ui-link button_accent">Оставить
+        свой отзыв</a>
+      <a routerLink="all-replies" class="button">Просмотреть все</a>
+    </div>
+  </section>
+
+  <app-about></app-about>
+
+  <app-footer></app-footer>
+</div>
